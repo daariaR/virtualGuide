@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+
+
+@keyframes transitionIn {
+
+    from{
+      opacity:0;
+      transform: rotateX(-10deg);
+    }
+  
+    to{
+      opacity:1;
+      transform: rotateX(0);
+    }
+    
+  }
+  
+  .mat-tab-group{
+    animation: transitionIn 2s;
+  }
+
+
+.history{
+    font-size:28px;
+    line-height: 50px;
+    font-family: 'Jura', sans-serif;
+    margin:0 auto;
+    width:fit-content;
+
+}
+
+.about-text{
+    text-align: center;
+    width:60%;
+    margin: 50px auto;
+}
+
+.about-images{
+    text-align: center;
+    min-width:1200px;
+    height: fit-content;
+    background-color: rgb(67, 106, 141);
+    margin: 50px auto;
+}
+
+mat-grid-tile{
+    cursor: pointer;
+}
+
+
+.about-history{
+    text-align: center;
+    width:60%;
+    margin: 50px auto;
+}
+
+h2{
+    font-family: 'Jura', sans-serif;
+    font-size:40px;
+}
+
+.contact{
+    font-size:15px;
+    display: flex;
+    flex-direction: column;
+    width:700px;
+    margin:0 auto;
+    text-align: center;
+}
+
+/* LEGALS /////////////////////////////////////////////////////////////// */
+
+.legals{
+    width: fit-content;
+    text-align: center;
+}
+
+.legals-div{
+    width:60%;
+    margin:0 auto;
+
+}
+
+.legals h2, a{
+    color:orange;
+}
+
+
+
+/* INFORMATIONS /////////////////////////////////////////////////////////////// */
+
+.info-div{
+    font-family: 'Jura', sans-serif;
+    display: flex;
+    width:100%;
+}
+
+.mat-form{
+    margin-left:0;
+    margin-top:35px;
+    width:fit-content;
+    height: fit-content;
+    /* background-color: teal; */
+    font-size:25px;
+    text-align: center;
+    font-weight: 800;
+    padding:10px;
+    cursor: pointer;
+}
+
+.mat-form p{
+    padding:20px;
+}
+
+.mat-form p:hover{
+    color:teal;
+}
+
+.info-div-div h2{
+    color:crimson;
+    line-height: 40px;
+}
+
+.info-div-div{
+    font-size:20px;
+    line-height: 25px;
+    margin:50px auto;
+    width:1000px;
+    /* background-color: aqua; */
+}
+
+.help-text{
+    font-family: 'Jura', sans-serif;
+    width:500px; margin:0 auto;
+    font-weight: 800;
+}
+
+.help-text h3{
+    font-family: 'Jura', sans-serif;
+    font-size:28px; color:rgb(181, 79, 123); font-weight:1000
+}

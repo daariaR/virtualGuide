@@ -1,0 +1,80 @@
+<div class="all">
+
+
+<div class="blog-page" *ngIf="blog">
+
+    <div class="blog">
+
+        <div class="blog-text" >
+
+            <p style="font-size:15px;"><b><a href="" style="color:rgb(95, 87, 87); text-decoration:none"> home </a> > <a href="/blog" style="color:rgb(255, 166, 0, 0.8); text-decoration:none"> blog </a></b></p>
+
+            <h2 style="color:orange; font-size:40px; line-height: 50px;">{{blog.h}}</h2><br><hr><br><br>
+
+            <p>
+                {{blog.p}}
+            </p><br><br>
+
+
+            <h2>{{blog.h1}}</h2><br>
+
+            <img [src]="blog.img1"/>
+
+            <p>{{blog.p1}}
+            </p>
+
+            <br><br>
+            <p>{{blog.p11}}
+            </p><br><br>
+
+            <h2>{{blog.h2}}</h2><br>
+
+            <p>{{blog.p2}}
+            </p>
+
+            <img [src]="blog.img2"/>
+
+            <br><br>
+            <p>
+                {{blog.p22}}
+            </p> <br><br>
+
+            <h2>{{blog.h3}}</h2><br>
+
+            <p>{{blog.p3}}
+            </p>
+
+            <img [src]="blog.img3"/>
+
+            <br><br>
+            <p>
+                {{blog.p33}}<br><br>
+            </p>
+
+            <img [src]="blog.img33"/>
+
+            <p><br>{{blog.p333}}
+            </p>
+
+            
+        </div>
+
+    </div>
+    <div class="news">
+        <mat-card class="news-text">
+            <h2> Latest news </h2><br>
+            <hr>
+            <p style="color:rgb(212, 67, 31); font-weight: 500;">Friday, August 12, 2022</p> <p>Futuristic Belgrade: The panorama of Belgrade changes from day to day</p><hr>
+
+            <p style="color:rgb(212, 67, 31); font-weight: 500;">Sunday, August 7, 2022</p> <p>Top 7 Belgrade bathing spots: Tropical heat is not stoping for days </p><hr>
+
+            <p style="color:rgb(212, 67, 31); font-weight: 500;">Tuesday, July 26, 2022</p> <p>Manifestations in Belgrade during summer: Events you should not miss</p><hr><br>
+
+            <a href="/blog" style="text-decoration:none; color:white"><button mat-button> All latest news </button></a>
+        </mat-card>
+        
+    </div>
+</div>
+
+
+</div>

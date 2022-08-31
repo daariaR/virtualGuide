@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+*{
+  font-family: 'Jura', sans-serif;
+  font-weight: 1000;
+}
+
+@keyframes transitionIn {
+
+  from{
+    opacity:0;
+    transform: rotateX(-10deg);
+  }
+
+  to{
+    opacity:1;
+    transform: rotateX(0);
+  }
+  
+}
+
+.all{
+  animation: transitionIn 2s;
+}
+
+h2{
+  font-family: 'Jura', sans-serif;
+  font-weight: 1000;
+}
+
+.voyages-main{
+  width:90%; 
+  margin:0 auto; 
+  height:fit-content; 
+  padding-bottom: 50px;
+  /* background-image: url('/assets/img/voy.jpg'); 
+  background-size: cover; 
+  background-attachment: fixed; */
+  /* width: 100%; */
+  max-width: calc(100% - 20px);
+}
+
+.voyage-main-item{
+  position:relative; 
+  margin: 0 auto;
+  /* padding: 0 10px; */
+  width:49%; 
+}
+
+ @media(max-width: 1000px){
+    .voyage-main-item{
+       width:100%; 
+     } 
+  } 
+
+
+.voyage-main-image{
+  width:100%; 
+  position:relative;
+}
+
+.voyage-main-image img{
+  width:100%; 
+  height: 400px;
+}
+
+.voyage-main-text{
+  position:absolute;
+  top:200px; 
+  left:30px; 
+  /* background-color: rgb(0, 0, 0, 0.6); */
+  padding:10px; 
+  border-radius: 20px;
+}
+
+#text-p{
+  color:rgb(255, 183, 0); 
+  font-size:25px;
+}
+
+.voyage-main-text #text-p:hover{
+  cursor: pointer;
+  color:rgb(255, 115, 0);
+}
+
+
+/* /////////////////////// INFORMATIONS ///////////////////// */
+/* /////////////////////// INFORMATIONS ///////////////////// */
+/* /////////////////////// INFORMATIONS ///////////////////// */
+
+.informations{
+    margin: 20px auto;
+    height: 500px;
+    width: 80%;
+    max-width: calc(80% - 20px);
+    /* background-color: rgba(224, 188, 71, 0.8); */
+    color:rgb(0, 0, 0);
+}
+
+.informations-div{
+    height: 500px;
+    margin:0 auto;
+    width:60%;
+    min-width: fit-content;
+    /* background-color: darksalmon; */
+    text-align: center;
+}
+
+.info-icons{
+    font-size:18px;
+    gap:20px 30px;
+    align-content: center;
+    flex-flow:row;
+    justify-content: space-between;
+    height: 300px; 
+    width:max-content; 
+    /* background-color: aqua;  */
+    margin:0 auto; 
+    display:flex; 
+    flex-wrap: wrap;
+}
+
+@media(max-width: 700px){
+  .informations{
+    width: 100%;
+    height: min-content;
+  }
+  .informations-div{
+    width: min-content;
+    height: fit-content;
+  }
+  .info-icons{
+    flex-flow:column; 
+    height: fit-content;
+   } 
+} 
+
+.info-icons .icons{
+    cursor: pointer;
+    width:40%;
+}
+
+.info-icons .icons:hover > svg{
+    color:rgb(203, 23, 83);
+}
+
+.info-icons .icons:hover > p{
+    color:rgb(203, 23, 83);
+}
+
+.informations-div #readmore:hover{
+    color:#e0b3c2;
+}
+
+.onlyp{
+    font-size:20px; 
+    color:rgb(203, 23, 83); 
+    cursor:pointer; 
+    margin-left:80%;
+}
+
+.onlyp:hover > p{
+    color:rgb(252, 54, 120);
+}
+
+
+
+
+/* ///////////////////////////////// BLOGS ///////////////////////////////// */
+/* ///////////////////////////////// BLOGS ///////////////////////////////// */
+/* ///////////////////////////////// BLOGS ///////////////////////////////// */
+
+.blogs{
+  padding-top:30px;
+  padding-bottom:30px;
+  position: relative; 
+  width:90%; 
+  height: min-content;
+  background-color:rgb(255, 255, 255); 
+  margin: 60px auto; 
+  text-align: center;
+}
+
+.blogs-head{
+  color: rgb(233, 85, 85);
+}
+
+.around-blog {
+  margin: 20px;
+  position:relative;
+}
+
+.blog-image {
+  cursor:pointer;
+  overflow: hidden;
+  height: 300px;
+}
+
+.blog-image>div {
+  width: 100%;
+  height: 100%;
+  transition: background-size 0.4s ease;
+  background-size: 100%;
+  background-position: center;
+}
+
+.blog-image:hover>div {
+  background-size: 105%;
+}
+
+#b1 {
+  background-image: url('/assets/img/klasaa.jpg');
+  width: 580px;
+  height: 1000px;
+}
+
+#b2 {
+  background-image: url('/assets/img/botanicka.jpg');
+  width: 580px;
+  height: 1000px;
+}
+
+#b3 {
+  background-image: url('/assets/img/skyline.jpg');
+  width: 580px;
+  height: 1000px;
+}
+
+#b4 {
+  background-image: url('/assets/img/stena.jpg');
+  width: 580px;
+  height: 1000px;
+}
+
+.blog-txt {
+  overflow: auto;
+  line-height: 15px;
+  text-align: left;
+  position: absolute;
+  background-color: white;
+  /* background-color: rgb(251, 88, 88); */
+  top: 75%;
+  width: 80%;
+  right: 0;
+}
+
+.blog-txt-div{
+  overflow: auto;
+  width: 90%;
+  margin: 5px auto;
+  /* background-color: rgb(218, 138, 138); */
+}
+
+.blog-txt-div a{
+  text-decoration: none;
+  color: rgb(233, 85, 85);
+}
+
+.blog-txt-div a:hover{
+  color: rgb(191, 26, 26);
+}
+
+.blog-txt-div:hover{
+  color: rgb(233, 85, 85);
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}

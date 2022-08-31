@@ -1,0 +1,34 @@
+<div class="main">
+    <mat-card class="container">
+
+        <p style="font-size:20px; text-align:left"> All posts</p>
+
+        <ng-container *ngFor="let b of blogs">
+            <mat-card-content class="blog1" (click)="goToPageBlog(b)" style="cursor: pointer;">
+
+                <div class="slikablog">
+                    <img [src]="b.img1" height="300px" width="500px" />
+                </div>
+
+                <div class="textblog">
+                    <div>
+                        <p><i> {{b.date}}</i></p>
+                        <a>
+                            <h1> {{b.name}} </h1>
+                            <p> {{b.preview}}
+                            </p>
+                        </a>
+                    </div>
+
+                    <mat-card-footer>
+                        <hr>
+                        <p><i>17 views</i></p>
+                    </mat-card-footer>
+
+                </div>
+
+            </mat-card-content>
+        </ng-container>
+
+    </mat-card>
+</div>

@@ -1,0 +1,220 @@
+<mat-tab-group mat-align-tabs="center"  [selectedIndex]="tabIndex">
+    <mat-tab label="About us">
+        <div class="history">
+            <div class="about-text">
+                <p>
+                    <a style="color:orange"><b>Belgrade decision </b></a> is a multidisciplinary creative guide.<br>
+                We work together to design, create and produce best guidance that we
+                 are proud of for people that we believe in. We are available for
+                  hire in a wide range of creative disciplines for a variety of jobs, projects and gigs.
+                </p>
+            </div>
+            
+        
+            <div class="about-images">
+
+                <mat-grid-list cols="5" rowHeight="400px" >
+                    <mat-grid-tile *ngFor="let gal of galleryCollection; let i = index" [colspan]="gal.cols" [rowspan]="gal.rows" [style.background]="'green'">
+                        <img [src]="gal.image" height="100%" width="100%" (click)="showLightbox(i)"
+                        class="sImage">
+                        <ng-image-fullscreen-view [images]="galleryCollection" [imageIndex]="currentIndex" 
+                        [show]="showFlag" (close)="closeEventHandler()"> </ng-image-fullscreen-view>
+                    </mat-grid-tile>
+                </mat-grid-list>
+        
+            </div>
+        
+            <div class="about-history">
+                <h2><b> HISTORY </b></h2>
+                <div class="left-history">
+                    <p>In the summer of 2022, while learning as student in Belgrade,
+                         designer discovered new passion,
+                        sharing a love of adventures, exploring, and art. With the help of their friends at BD,
+                        they formed brand, a diverse, experience-and-share, make-it-from-scratch, do-it-together 
+                        all over Belgrade's famous and infamous spots.
+                        It later became a creative studio,
+                        in a room they rented in center of Belgrade.
+                    </p>
+                </div>
+                <div class="right-history">
+                    <p>In the years since, we worked on a wide array of unique projects with some of the best people
+                         from Belgrade and beyond. We strive to keep our work unique and smart, with room for a 
+                         little magic. You can find us anywhere, and if the voyage is the right fit, we'd love to work with you.
+                          Feel free to <a style="color:orange"><b> contact us below.</b></a>
+                        </p>
+                </div>
+            </div>
+
+            <mat-card class="contact">
+                <h2 style="color:crimson"> Contact us </h2><br>
+                <mat-form-field class="example-full-width" appearance="fill" style="width:40%;">
+                    <mat-label>email address</mat-label>
+                    <input matInput placeholder="xxxx@xx.xc"  >
+                  </mat-form-field>
+                <mat-form-field appearance="fill" style="width:90%;">
+                    <mat-label>Type your message here..</mat-label>
+                    <textarea matInput></textarea>
+              </mat-form-field>
+              <button mat-button style="width:150px; background-color: crimson; color:white">SEND</button>
+            </mat-card>
+            
+        </div>
+
+
+    
+    </mat-tab>
+
+
+
+    <mat-tab label="Informations" id="secondTab">
+          <div class="info-div">
+
+
+            <div class="mat-form">
+           
+                <p (click)="change('health')"> <mat-icon> local_hospital</mat-icon> Health  </p><hr>
+                <p (click)="change('safety')"> <mat-icon>vpn_lock</mat-icon> Safety </p><hr>
+                <p (click)="change('numbers')"> <mat-icon> phone</mat-icon> Emergency Numbers</p><hr>
+                <p (click)="change('weather')"> <mat-icon>cloud</mat-icon> Local Weather</p><hr>
+                <p (click)="change('language')"> <mat-icon>translate</mat-icon> Language </p><hr>
+                <p (click)="change('currency')"> <mat-icon>euro_symbol</mat-icon> Currency </p>
+            </div>
+
+            <div class="info-div-div">
+                <h2> {{information.h1}} </h2> <br>
+                <p>{{information.p1}} </p> <br><br><br>
+                <h2> {{information.h2}} </h2><br>
+                <p>{{information.p2}} </p><br><br><br>
+
+            </div>
+          </div>
+    </mat-tab>
+
+
+    <mat-tab label="Help">
+
+        <div style="display:flex; margin: 0 auto; width:150px; padding:10px;"> &nbsp; &nbsp;
+            <h2 style="padding:10px; font-weight:1000"> FAQ</h2>
+            <mat-icon style=" transform: scale(2); padding:10px;"> live_help</mat-icon>
+        </div><br><br>
+        <div class="help-text">
+            <h3> How to see more about product? </h3>
+            <p>
+                Go to page product by clicking on the image of art you want to read more about. 
+                There is a shortcut - when you put you pointer over art product you will
+                see "Quick view" option. Click on it.
+            </p>
+
+
+            <h3> How to add to cart? </h3>
+                <p>
+                    Go to page product by clicking on the image of art you want to purchase.
+                    When page opens, next to images, there is a button "add to cart".
+                </p>
+
+            <h3> How to view cart? </h3>
+            <p>
+                At the top of site, in navigation menu there is an cart icon. When you click cart icon,
+                cart with your shopping list will open.
+            </p>
+
+            <h3> How to add buy / checkout / finish shopping? </h3>
+            <p>
+                When you open cart on icon in the navigation on the top of the site, you will see
+                check-out button bellow, but only if your shopping list is not empty!
+            </p>
+
+            <h3> How does the refund policy work?</h3>
+            <p> 
+                If you're unhappy with product for any reason, email us withing 15 days of purchasing
+                on the web, and we weill give you a full refund. No strings attached
+            </p>
+
+        </div><br><br>
+    </mat-tab>
+
+    <mat-tab label="Legals">
+        <div class="legals">
+        <div class="legals-div">
+            <p><br><br><h2>Service Terms</h2><br>
+                <a>Terms of Service:</a> apply to the purchase of our service offerings by all customers through any of our contracting entities. You may find the documents and policies linked to or referenced in the standard Terms of Service below.
+                Contracting Entity Table: provides the applicable contracting entity for your purchase, contact information, and governing law.<br><br>
+
+
+                <a>Service Descriptions:</a> provides a general description of each service and any additional service-specific terms that may apply to your purchase. Professional Services Terms and Conditions: provide the terms under which we may provide certain professional services to our customers, subject to an agreed-upon statement of work.
+                Data Processing Addendum (DPA) – also available in German: provides the privacy and data protection terms and conditions which govern our processing of Personal Data on our customers’ behalf as a service provider and data processor. The DPA incorporates terms specific to the GDPR, including the Standard Contractual Clauses (also known as SCCs or Model Clauses), CCPA-specific provisions (including a “no sale” clause), and other robust, market-leading, safeguards and assurances.
+                We also have sample copies available for download and review in English and German.<br><br>
+
+
+                <a>Privacy Policy:</a> explains what personal data we collect from visitors to the GoTo websites and/or properties and how we can use any such personal data.
+
+
+                Branding Guidelines: provides guidance on the correct use of our trademarks and branding.<br><br>
+
+
+                <a>Regional Supplement:</a> addresses additional regulatory requirements in various geographies with regard to the provision of applicable telecommunications services.<br><br>
+
+
+                <br><br><h2>Privacy & Security</h2><br>
+
+                With users in nearly every country around the world, we are committed to implementing and maintaining a global data privacy and security program designed to protect personal and confidential information. You can visit our Trust & Privacy Center for more information. Some of the helpful resources available include:<br><br>
+
+                A high-level overview of the program;<br>
+                Third-party certifications, reports, and voluntary framework participations;<br>
+                <a>Data processing locations and Sub-processor Disclosures</a> and<br>
+                The ability to subscribe to receive notification of any new sub-processors.<br>
+                <a>Technical and Organizational Measures or "TOMs" documentation,</a> which provides encryption use and standards, retention periods, and other helpful product-level information.<br>
+
+                Be sure to visit the Trust & Privacy Center’s Product Resources page to review any service- or suite-specific documentation, certifications, and disclosures.<br><br>
+
+
+                <br><br><h2>Other Agreements</h2><br>
+
+                <a>Partner Network Terms:</a> applies to companies participating in our channel sales programs.<br><br>
+
+                API Terms: sets forth the terms under which a customer or developer may leverage our standard APIs to integrate its own or other third party applications with our products and services.
+
+                <a>Business Associate Agreement (BAA):</a> is designed to support our customers’ applicable HIPAA compliance obligations for applicable service offerings. A pre-signed executable copy is available for such services in the Product Resources section of our Trust & Privacy Center.<br><br>
+
+                GoTo Community Terms: sets forth the terms for your participation in GoTo's community forums.<br><br>
+
+
+                <br><br><h2>Legal Notices</h2><br>
+
+
+                Contractual notices should be sent to us at the address for your applicable contracting entity, with a copy to GoTo’s Legal Department, 333 Summer Street, Boston, Massachusetts 02210 USA.<br><br>
+
+                Digital Millennium Copyright Act (DMCA) Notice: We have adopted and implemented a <a>notice-and-takedown procedure</a> for copyright owners whose copyrighted work(s) appear on our websites without permission. For details please see the DMCA Notice.<br><br>
+
+
+                <br><br><h2>Policies & Disclosures</h2><br>
+
+                Anti-Spam Policy: We prohibit the use of our products and services in any manner associated with the transmission, distribution and delivery of spam.
+                Code of Business Conduct: Our Code of Business Conduct guides our employees on their ethical and legal responsibilities.<br><br>
+
+                Code of Practice – UK, Ireland, and Australia:<a> These codes of practice provide additional region-specific information</a> about obtaining additional support for our applicable telecommunications services.
+                Open Source Software Disclosure: Certain of our cloud-based services include third-party code licensed to us. This document sets for a list of disclosures and disclaimers related to inclusion of such open source licensed software.
+                <a>Prevention of Modern Slavery Statement:</a> This sets out our approach to understanding all potential modern slavery risks related to our business, and our actions to mitigate such risks.<br><br>
+
+                Trademark and Other Intellectual Property Information: This page provides branding and marketing guidelines to answer common questions about the correct use of our marks, including how to identify the correct form for those marks, properly give trademark notice using the ™ and ® designations, and appropriately attribute them.
+                <a>Government Request Policy:</a> This document provides an overview of how GoTo receives, handles, and responds to requests from the government for customer information.<br><br>
+
+
+                <br><br><h2>Payment & Financial Information</h2><br>
+
+
+                <a>W-9s and Payment Remittance</a>  <br><br>
+
+                UK Tax Policy Statement <br><br>
+
+                Notices and Rates for GetGo Communications LLC<br><br>
+
+            </p>
+        </div>
+        </div>
+    </mat-tab>
+  
+
+
+</mat-tab-group>
+

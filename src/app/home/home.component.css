@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+@keyframes transitionIn {
+
+  from{
+    opacity:0;
+    transform: rotateX(-10deg);
+  }
+
+  to{
+    opacity:1;
+    transform: rotateX(0);
+  }
+  
+}
+
+.all{
+  animation: transitionIn 2s;
+}
+
+.main-div-video{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.home-main{
+  
+  margin-top:30px;
+  width:100%;
+  max-width: calc(100%-20px);
+}
+
+/* ///////////////////////////////////////EXPERIENCE//////////////////////// */
+/* ///////////////////////////////////////EXPERIENCE//////////////////////// */
+/* ///////////////////////////////////////EXPERIENCE//////////////////////// */
+
+.home-main-img{
+  margin-left:0 auto;
+  position: relative;
+  width: 100%;
+  min-width: 800px;
+  min-height: 500px;
+}
+
+.home-main-img-hover{
+  position: absolute;
+  top:200px;
+  right: 10%;
+  font-size: 60px;
+  color:orange;
+  font-family:'Monoton', cursive;
+
+}
+
+.home-middle{
+  font-family: 'Jura', sans-serif;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:100%;
+  max-width: calc(100%-20px); 
+  min-width: fit-content;
+  height: fit-content;
+}
+
+.experience mat-card-content:hover{
+  transition: .3s ease-in-out;
+  background-color: rgb(255, 255, 255);
+}
+
+.experience{
+  font-family: 'Jura', sans-serif;
+  width:600px; 
+  height:fit-content; 
+  margin:20px 20px; 
+  text-align: center;
+  font-weight: 1000;
+  }
+
+  .experience h2{
+    font-family: 'Jura', sans-serif;
+    font-weight: 1000;
+  }
+
+/* <!-- EDE0D4, 237, 224, 212 
+  E6CCB2, 230, 204, 178
+   DDB892, 221, 184, 146
+    B08968,
+     7F5539, 
+     9C6644 --> */
+
+.history{
+  font-family: 'Jura', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  margin:50px auto;
+  width:100%; 
+  max-width: calc(100% - 20px);
+  height: fit-content;
+  border-radius: 30px;
+  text-align: center; 
+}
+
+
+.history h2{
+  font-family: 'Jura', sans-serif;
+}
+.history-content{
+  width:35%;
+  min-width: 350px;
+  line-height: 28px; 
+  font-size:20px;
+  margin:0 auto;
+  padding:20px;
+}
+
+.history-image{
+  width:50%;
+  min-width: 700px;
+  min-height: 500px;
+  margin:0 auto;
+  padding:20px;
+}
+
+
+/* @media(max-width: 700px){
+  .history{
+    width: 100%;
+    height: min-content;
+  }
+} */
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////// BLOGS ///////////////////////////////// */
+/* ///////////////////////////////// BLOGS ///////////////////////////////// */
+/* ///////////////////////////////// BLOGS ///////////////////////////////// */
+
+.blogs{
+  font-family: 'Jura', sans-serif;
+  padding-top:30px;
+  padding-bottom:30px;
+  position: relative; 
+  width:90%; 
+  height: min-content;
+  background-color:rgb(255, 255, 255); 
+  margin: 30px auto; 
+  text-align: center;
+}
+
+.blogs-head{
+  color: rgb(233, 85, 85);
+}
+
+.around-blog {
+  margin: 20px;
+  position:relative;
+}
+
+.blog-image {
+  cursor:pointer;
+  overflow: hidden;
+  height: 300px;
+}
+
+.blog-image>div {
+  width: 100%;
+  height: 100%;
+  transition: background-size 0.4s ease;
+  background-size: 100%;
+  background-position: center;
+}
+
+.blog-image:hover>div {
+  background-size: 105%;
+}
+
+#b1 {
+  background-image: url('/assets/img/klasaa.jpg');
+  width: 580px;
+  height: 1000px;
+}
+
+#b2 {
+  background-image: url('/assets/img/botanicka.jpg');
+  width: 580px;
+  height: 1000px;
+}
+
+#b3 {
+  background-image: url('/assets/img/skyline.jpg');
+  width: 580px;
+  height: 1000px;
+}
+
+#b4 {
+  background-image: url('/assets/img/stena.jpg');
+  width: 580px;
+  height: 1000px;
+}
+
+.blog-txt {
+  overflow: auto;
+  line-height: 15px;
+  text-align: left;
+  position: absolute;
+  background-color: white;
+  /* background-color: rgb(251, 88, 88); */
+  top: 75%;
+  width: 80%;
+  right: 0;
+}
+
+.blog-txt-div{
+  overflow: auto;
+  width: 90%;
+  margin: 5px auto;
+  /* background-color: rgb(218, 138, 138); */
+}
+
+.blog-txt-div a{
+  text-decoration: none;
+  color: rgb(233, 85, 85);
+}
+
+.blog-txt-div a:hover{
+  color: rgb(191, 26, 26);
+}
+
+.blog-txt-div:hover{
+  color: rgb(233, 85, 85);
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.flex-container {
+    background-size: cover;
+    background-image: url('/assets/img/bel.jpg');
+    background-attachment: fixed;
+}
+
+.flex-child {
+    background-image: url('/assets/img/be.jpg');
+    background-attachment: fixed;
+    padding:100px;
+    margin-left: 10%;
+    /* flex: 1; */
+    border: 2px solid yellow;
+    font-family: 'Laila', cursive;
+    width: 30%;
+}  
+
+.flex-childd{
+    background-color:rgb(255, 244, 94, 0.7);
+    padding:100px;
+    margin-left: 52%;
+    /* flex: 1; */
+    border: 2px solid rgb(53, 53, 36);
+    font-family: 'Laila', cursive;
+    width: 30%;
+}  
+
+/* ////////////////////////////// CAROUSEL/////////////////////////// */
+
+
+h1 {
+  font-family: 'Rubik Dirt', sans-serif;
+  font-weight: 1000;
+}
+
+.serbianMade {
+  position: relative;
+  width: 100%;
+  margin: 100px auto;
+  /* background-color: black; */
+  height: 36vw;
+}
+
+.main-product-img {
+  background-color: red;
+  width: 50%;
+  height: 90%;
+  position: absolute;
+  top: 2vw;
+}
+
+.main-product-img img {
+  height: 100%;
+  width: 100%
+}
+
+
+/* @media only screen and (max-device-width: 1000px) {
+  .main-product-img{display:none;}
+} */
+
+.main-product-txt {
+  background-color: rgba(244, 234, 224, 0.7);
+  width: 60%;
+  height: 100%;
+  margin-left: 40%;
+  border: solid rgba(244, 234, 224, 0.5);
+  min-width: max-content;
+}
+
+.main-product-txt-div {
+  /* overflow: auto; */
+  /* background-color: aqua; */
+  font-size: 3vw;
+  line-height: normal;
+  font-family: 'Rubik Dirt', sans-serif;
+  text-align: left;
+  width: 50%;
+  margin-top: 12%;
+  margin-left: 25%;
+  color: rgb(255, 174, 0);
+  min-width: min-content;
+}
+
+.main-product-txt-div p {
+  padding: 2px;
+}
+
+.main-product-txt-div button {
+  background-color: rgb(221, 184, 146);
+  color: white;
+  border-radius: 20px;
+
+}
+
+.main-product-txt-div button:hover {
+  background-color: rgb(151, 133, 95);
+}
+
+
+
+
+  
+/*  */

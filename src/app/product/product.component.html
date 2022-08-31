@@ -1,0 +1,43 @@
+<div style=" width:100%; margin:50px auto; width:max-content;">
+    <div style="display:flex; width: 70%; margin: 0 auto; flex-flow: row; justify-content: center; " *ngIf="product">
+        <div style="height:500px;">
+
+
+            <div class="img-slide1" id="box" (click)="changeImg1()">
+                <img [src]="product.image3" width="60px" height="50px" />
+            </div>
+            <div class="img-slide2"  *ngIf="product.img2" (click)="changeImg2()">
+                <img [src]="product.image2" width="60px" height="50px" />
+            </div>
+
+
+        </div>
+        <div>
+            <img [src]="product.image" width="650px" height="500px" />
+        </div>
+
+
+        <div style="width: 780px; height:500px; margin:0 50px; ">
+            <div style=" padding-top:10px;">
+                <p style="font-size:50px"> {{product.name}} </p><br>
+                <p style="font-size:20px; color:goldenrod"> ${{product.price}}.00 </p> 
+                <p> Brighten your home, or office with a one of a kind painting.</p>
+
+                <p> - Watch the Painting Process <br>
+                    - 20" x 20" Acrylic on Canvas<br>
+                    - Signed by The Artist<br>
+                    - Free International Shipping</p><br>
+
+            </div>
+
+            <div style="height:170px; margin-top:33px;">
+                <label for="fname">Quantity</label><br>
+                <input type="number" value="1" name="fname" style="width:70px; height:30px"><br><br>
+                <button mat-raised (click)="addToCart(product);" > Add to cart </button>
+                <button mat-raised> Buy now </button>
+            </div>
+
+        </div>
+
+    </div>
+</div>

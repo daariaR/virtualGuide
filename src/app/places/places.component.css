@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+.places-main{
+    font-family: 'Jura', sans-serif;
+    min-width: 1200px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.places-cover-img{
+    width: 100%;
+    max-width: calc(100% - 20px);
+}
+
+.places-cover-img-div{
+    width:1400px;
+    height: 650px;
+    margin:0 auto;
+    position: relative;
+}
+
+.places-cover-img-div img{
+    width:1400px;
+    height: 650px;
+    margin:0 auto;
+    position: relative;
+
+}
+
+.places-cover-img-div-hover{
+    position: absolute;
+    top:100px;
+    right: 10%;
+    font-size: 60px;
+    color:orange;
+    font-weight: 1000;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.places-map-txt{
+    /* background-color:rgb(44, 101, 101);  */
+    display:flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    width:fit-content;
+    margin:0 auto;
+    padding:40px;
+}
+
+.places-txt-div{
+    font-size:17px;
+    line-height: 30px;
+    margin:auto;
+    padding:20px;
+    text-align: center;
+    width:600px;
+}
+
+.places-map-div{
+    padding:20px;
+    margin:auto;
+    text-align: center;
+    width:600px;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.places-img{
+    /* background-color:rgb(124, 222, 222); */
+    width:1200px;
+    height: fit-content;
+    margin:0 auto;    
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.places-txt{
+    /* background-color:rgb(33, 161, 161); */
+    width:fit-content;
+    height: fit-content;
+    margin:0 auto;    
+}
+
+.places-txt-txt-div{
+    font-size:17px;
+    line-height: 30px;
+    margin:auto;
+    padding:20px;
+    text-align: center;
+    width:1160px;
+    
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.places-slideshow{
+    /* background-color:rgb(31, 199, 199);     */
+    padding:30px;
+}
+
+.blog-image{
+    margin:0 20px;
+}
+
+.blog-image img{
+    height: 350px;
+
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.places-info-all{
+    margin:0 auto;
+    width: 100%;
+    background-color:rgb(237, 208, 115);
+    text-align: center;
+}
+
+.places-info-all h1{
+    padding-top:20px;
+    color:rgb(255, 255, 255);
+    font-family: 'Jura', sans-serif;
+    font-size:30px;
+    font-weight: 1000;
+}
+
+.places-info{
+    display:flex;
+    flex-wrap: wrap;     
+}
+
+
+.places-info-div h2{
+    color:rgb(240, 118, 61);
+}
+
+.places-info-div{
+    font-weight: 1000;
+    font-size:15px;
+    line-height: 25px;
+    padding-left:20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    text-align: center;
+    width:600px;
+}

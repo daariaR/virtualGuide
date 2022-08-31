@@ -1,0 +1,29 @@
+<div class="all" style="width:100%; position: relative;">
+    <div style="display:flex; width: 70%; margin: 50px auto; flex-flow: row; justify-content: center;" *ngIf="art">
+        <div>
+            <img [src]="art.image" width="500px" height="500px" />
+        </div>
+
+        <div style="width: 400px; height:500px; margin:0 50px; ">
+            <div style=" padding-top:10px;">
+                <p style="font-size:50px; color:black"> {{art.name}} </p><br>
+                <p style="font-size:20px; color:teal"> ${{art.price}}.00 </p> 
+
+                <p style="font-size:13px; color:black"> size: 180x60 </p>
+                <p style="font-size:13px; color:black"> painted by {{ art.author }} </p><br>
+                <p style="color:orange"> IN STOCK </p>
+
+                <br><br><br><br><br><br><br><br>
+                <button mat-button (click)="addToCart(art);"> ADD TO CART </button><br><br>
+                <p (click)="goToPageProduct(art)" [mat-dialog-close]> View more details </p><br>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div style="top:0;right:0; position:absolute; font-size: 20px;">
+        <p mat-dialog-close> X </p>
+    </div>
+
+</div>

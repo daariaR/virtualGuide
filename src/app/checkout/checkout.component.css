@@ -1,0 +1,15 @@
+
+
+.main-checkout{
+    width:700px;
+    margin:0 auto;
+}
+
+#remove:hover{
+    color: crimson;
+}
+
+button{
+    background-color: darkcyan;
+    color:white
+}

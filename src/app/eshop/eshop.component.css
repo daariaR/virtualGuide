@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+
+* {
+    font-family: 'Jura', sans-serif;
+}
+
+@keyframes transitionIn {
+
+  from{
+    opacity:0;
+    transform: rotateX(-10deg);
+  }
+
+  to{
+    opacity:1;
+    transform: rotateX(0);
+  }
+  
+}
+
+.all{
+  animation: transitionIn 2s;
+}
+
+h1 {
+    font-weight: 1000;
+}
+
+
+/* ////////////////////////// COLLECTION BY DARIA ///////////////////// */
+/* ////////////////////////// COLLECTION BY DARIA ///////////////////// */
+/* ////////////////////////// COLLECTION BY DARIA  ///////////////////// */
+
+.new-product-div {
+    width: 60%;
+    margin: 80px auto;
+}
+
+.new-product-div-text {
+    margin: 0 auto;
+    width: 25%;
+    text-align: center;
+}
+
+.atag {
+    margin-top: 10px;
+    float: right;
+}
+
+.atag a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.atag a:hover {
+    color: rgb(124, 95, 95);
+}
+
+
+ng-image-slider img:hover {
+    background-color: black;
+}
+
+
+
+/* ////////////////////////// TOP E SHOP ////////////////////////////*/
+
+.top-shop{
+    line-height: normal;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    padding:50px 0px;
+    font-size:30px;
+    margin: 0 auto;
+    width:100%;
+    min-width:fit-content;
+    background-color: rgba(210, 98, 98, 0.8);
+}
+
+/* ////////////////////////// ESHOP ALL PRODUCTS ///////////////////// */
+/* ////////////////////////// ESHOP ALL PRODUCTS ///////////////////// */
+/* ////////////////////////// ESHOP ALL PRODUCTS ///////////////////// */
+
+.allProducts{
+    display: flex; 
+    min-width: fit-content;
+    margin:20px auto;
+}
+
+.filterProducts{
+    /* background-color:aqua; */
+    min-width: 300px; 
+    text-align: left; 
+    margin-top:50px; 
+}
+
+.filterProducts svg:hover{
+    cursor:pointer;
+}
+
+.productsMatCard{
+    margin:auto;
+    /* background-color: teal;  */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap:5px ;
+}
+
+
+.mat-card-contents {
+    position: relative;
+    padding: 20px; 
+    width: 500px;
+}
+
+.mat-card-content .hoverTxt{
+    width:40%;
+    height: 60px;
+    bottom: 0px;
+    right:0px;
+    text-align: center;
+    position: absolute;
+    transition: opacity .7s ease-in-out;
+    opacity :0;
+    /* display: none; */
+}
+
+.mat-card-content:hover>.hoverTxt{
+    /* display: block; */
+    opacity :1;
+
+}
+
+.hoverTxt p{
+  font-size:20px;
+  font-weight: 800;
+  color:rgb(0, 0, 0);
+}
+
+
+.mat-card-content>.hoverImg {
+    position: absolute;
+    bottom: 20px;
+    /* display: none; */
+    transition: opacity .7s ease-in-out;
+    opacity: 0;
+  }
+
+
+.mat-card-content:hover .hoverImg {
+    opacity: 1;
+    /* display: block; */
+}
+
+
+
+/* ////////////////////////// ESHOP ALL PRODUCTS ///////////////////// */
+/* ////////////////////////// ESHOP ALL PRODUCTS ///////////////////// */
+/* ////////////////////////// ESHOP ALL PRODUCTS ///////////////////// */
+/* FILTER */
+
+
+
+
+
+
+/* ///////////////////////////////// MIDDLE INFO ///////////////////////////////// */
+/* ///////////////////////////////// MIDDLE INFO ///////////////////////////////// */
+/* ///////////////////////////////// MIDDLE INFO ///////////////////////////////// */
+
+/* @media(max-width: 800px){
+    .middle{
+      flex-wrap: wrap;
+    }
+    .middle-divs{
+      width: 100%; 
+    }
+  } */
+  
+  .middle {
+    width: 100%;
+    background-color: rgb(212, 133, 133);
+    height:min-content;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  
+  .middle-divs {
+    color: white;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  
+  .content svg {
+    color: white;
+    margin: 12px 12px;
+  }
+  
+  
+  .content {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    margin: 15px auto;
+    color: white;
+    position: relative;
+    /* padding:10px; */
+  }
+  
+  .content::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* transition: all .1s; */
+  
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .middle-divs:hover>.content::after {
+    border: dashed;
+    animation: spin 10s linear infinite;
+  }
+  
+  
+  
+  

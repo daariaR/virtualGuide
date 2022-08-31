@@ -1,0 +1,105 @@
+<div class="places-main" *ngIf="place">
+
+    <div class="places-cover-img">
+
+        <div class="places-cover-img-div">
+            <img [src]="place.imgCover"/>
+            <div class="places-cover-img-div-hover">
+                <p>{{place.heading}}</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="places-map-txt">
+        <div class="places-txt-div">
+            <p style="font-size:20px;"><b>{{place.text}}</b><br><br>   
+            </p>
+                
+            <p>{{place.text2}}</p>
+        </div>
+
+        <div class="places-map-div">
+            <iframe [src]="place.mapUrl | safe" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </div>
+
+    <div class="places-img">
+        <img [src]="place.img1" width="100%"/>
+    </div>
+
+    <div class="places-txt">
+        <div class="places-txt-txt-div">
+            <p>{{place.text3}}</p>
+        </div>
+    </div>
+
+    <div class="places-slideshow">
+        <div class="blogs">      
+            <owl-carousel-o [options]="placesOptions">
+          
+              <ng-template carouselSlide>
+                <div class="blog-image">
+                    <img [src]="place.img2"/>
+                </div>
+              </ng-template>
+          
+              <ng-template carouselSlide>
+                <div class="blog-image">
+                    <img [src]="place.img1"/>
+                </div>
+              </ng-template>
+
+              <ng-template carouselSlide>
+                <div class="blog-image">
+                    <img [src]="place.img3"/>
+                </div>
+              </ng-template>
+
+              <ng-template carouselSlide>
+                <div class="blog-image">
+                    <img [src]="place.img4"/>
+                </div>
+              </ng-template>
+
+              <ng-template carouselSlide>
+                <div class="blog-image">
+                    <img [src]="place.img5"/>
+                </div>
+              </ng-template>
+
+            </owl-carousel-o>
+          
+          </div>
+          
+          
+        
+    </div>
+
+    <div class="places-info-all">
+
+        <h1> How to get here? </h1>
+
+        <div class="places-info">
+
+            <div class="places-info-div">
+                <br><h2>By Plane</h2>
+                <p>+381 192 192 921092</p>
+                <p>The nearest airport to Belgrade is Belgrade (BEG). Nikola Tesla Airport A1 Shuttle operates a bus from Belgrade Nikola Tesla Airport to Belgrade Main station every 30 minutes. Tickets cost RSD 300 - RSD 360 and the journey takes 30 min. Bus Plus also services this route every 30 minutes. Alternatively, you can take a train from Timisoara (TSR) to Belgrade via Cartier Aeroport, Timişoara Nord, Stamora Moraviţa, and Vrsac in around 5h 29m.
+                </p> <br><br>
+            </div>
+        
+            <div class="places-info-div">
+                <br><h2>By Bus</h2>
+                <p>+381 192 192 921092</p>
+                <p>Using the public transport within the city will get you much faster to your destination than using a car. Public transport is pretty efficient; there are cca 176 bus lines (27 night lines), 12 tram lines and 8 trolleybus lines. How frequently these lines run depends on the route and the period of the day; the waiting time is between 3 and 30 minutes. Each station, at least those in the centre, has a bus schedule. The schedule can be seen 
+                    <a style="text-decoration:none; color:rgb(240, 118, 61)" href="https://www.busevi.com/">here.</a>
+                </p><br><br>
+            </div>
+        </div>
+    </div>
+
+</div>
+

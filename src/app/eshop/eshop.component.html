@@ -1,0 +1,165 @@
+
+<div class="all">
+
+
+<div class="top-shop">
+    <p style="width:900px; margin: 0 auto"> The majority of artworks are from personal private art collection. We are located in Belgrade where artworks are available
+        to be seen in person. You're always welcome to &nbsp; 
+        <a href="/about" style="text-decoration:none; color:rgb(79, 74, 69)" id="ainp">
+            contact us</a> &nbsp; and suggest a deal. </p>
+</div>
+
+<div class="allProducts">
+
+  
+    <div class="filterProducts">
+      <div style="width:75%; margin: 0 auto; ">
+        <p style="font-size:30px; padding-bottom: 10px;"> ART SHOP </p> 
+  
+        <hr>
+        <p (click)="showTypeFunc();" style="font-size:17px; padding:15px 0 15px 0 "> Collections 
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16" style="float:right; margin: 0 auto">
+          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg> 
+        </p>
+        
+        <div *ngIf="showType" style="text-align:left;"> 
+           <mat-selection-list #collectiontype  [(ngModel)]="selectedOptions" (ngModelChange)="filterCollection($event)">
+          <mat-list-option *ngFor="let type of typeCollection" [value]="type.value">
+            {{type.name}}
+          </mat-list-option>
+        </mat-selection-list>
+        <br>
+        <p>
+          Options selected: {{collectiontype.selectedOptions.selected.length}}
+        </p>
+    
+        
+        </div>
+        <hr>
+    
+        <p (click)="showPriceFunc();" style="font-size:17px; padding:15px 0 15px 0 "> Price 
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16" style="float:right; margin: 0 auto">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+        </p>
+    
+        <div class="showPricediv" *ngIf="showPrice" style="text-align:left;">    
+          <input  type="number" placeholder="min price" [(ngModel)]="minSelectedPrice" style="height:30px; margin:5px;">
+          <input  type="number" placeholder="max price" [(ngModel)]="maxSelectedPrice" style="height:30px; margin:5px;"><br><br>
+          <button (click)="selectPrice()" style="height: 40px; width:90px"> apply </button> &nbsp; &nbsp;
+          <button (click)="resetPrice()" style="height: 40px; width:90px"> reset </button>
+
+        </div>
+        <hr>
+  
+      </div>
+     
+    </div>
+  
+    <div class="pageProducts">
+  
+      <mat-card class="productsMatCard">
+
+
+        <div class="sort-div" style="width:100%; text-align: right;">
+          <mat-form-field appearance="fill" >
+            <mat-label>Sort</mat-label>
+            <mat-select (selectionChange)="sortF($event.value)">
+                <mat-option [value]="'name'"> name (a-z) </mat-option>
+                <mat-option [value]="'lowest'"> lowest price </mat-option>
+                <mat-option [value]="'highest'"> highest price </mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+        
+
+        <ng-container *ngFor="let art of arts">
+          <mat-card-content class="mat-card-contents"  style="cursor: pointer;">
+            <img style="width: 500px; height: 430px;" [src]="art.image" (click)="goToPageProduct(art)">
+            <div class="hoverImg" *ngIf="art.img2"  (click)="goToPageProduct(art)">
+              <img style="width: 500px; height:430px;" [src]="art.image2"> 
+            </div>
+            <div class="hoverTxt">
+                <p (click)="openQuickViewDialog(art)">Quick view</p>
+            </div>
+          </mat-card-content><br>
+        </ng-container>
+  
+      </mat-card>
+    </div>
+  
+  
+</div>
+  
+<div class="middle">
+
+  <div class="middle-divs">
+    <div class="content">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-truck"
+        viewBox="0 0 16 16">
+        <path
+          d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+      </svg>
+    </div>
+    <p><b> FREE SHIPPING </b> </p>
+    <p> On all orders over $50</p>
+  </div>
+
+  <div class="middle-divs" style="width:25%; height:100%; text-align:center;">
+    <div class="content">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-wallet2"
+        viewBox="0 0 16 16">
+        <path
+          d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
+      </svg>
+    </div>
+    <p> <b>FREE RETURNS </b> </p>
+    <p> Returns are free within 14 days</p>
+  </div>
+
+  <div class="middle-divs" style="width:25%; height:100%; text-align:center;">
+    <div class="content">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-workspace"
+        viewBox="0 0 16 16">
+        <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+        <path
+          d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
+      </svg>
+    </div>
+    <p><b> SUPPORT 24/7 </b> </p>
+    <p> Contact us 24 hours a day</p>
+  </div>
+
+  <div class="middle-divs" style="width:25%; height:100%; text-align:center;">
+    <div class="content">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-credit-card"
+        viewBox="0 0 16 16">
+        <path
+          d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z" />
+        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z" />
+      </svg>
+    </div>
+    <p> <b>100% PAYMENT SECURE </b> </p>
+    <p> Your payments are safe with us</p>
+  </div>
+
+
+</div>
+
+<div class="new-product-div">
+    <div class="new-product-div-text">
+        <h1>COLLECTION</h1>
+        <p style="float:right"> by daria </p>
+    </div>
+    
+
+    <ng-image-slider [images]="imgCollection" #nav ></ng-image-slider>
+
+    <div class="atag">
+        <a> coming soon </a>
+    </div>
+    
+</div>
+
+</div>

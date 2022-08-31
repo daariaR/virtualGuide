@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+
+* {
+    font-family: 'Jura', sans-serif;
+}
+
+.blog-page{
+    /* background-color:teal; */
+    display: flex;
+    width: fit-content;
+    margin:10px auto;
+
+}
+
+
+.blog{
+    /* background-color: darkgoldenrod; */
+    width:700px;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+h2{
+    font-size:28px;
+    text-align: center;
+    font-family: 'Jura', sans-serif;
+
+}
+
+.blog img{
+    width:700px;
+}
+
+
+.news{
+    width:350px;
+    padding:75px;
+}
+
+.news-text{
+    width:300px;
+    font-weight: 1000;
+    position:sticky;
+    top: 180px;
+}
+
+.news-text p:hover{
+    cursor: pointer;
+    color: rgb(102, 95, 95)
+}
+
+.news-text button{
+    color:white;
+    background-color: orange;
+    margin-left:50px;
+    width:200px;
+    height:35px;
+}
+

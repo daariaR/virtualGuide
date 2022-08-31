@@ -1,0 +1,195 @@
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button> -->
+
+<div class="main-checkout">
+    <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+
+        <mat-step >
+            <ng-template matStepLabel>Items</ng-template>
+            <div class="cart-product"
+                style="display:flex;flex-wrap:wrap; justify-content: left; text-align:left;width:100%;"
+                *ngFor="let art of artsCart">
+                <div class="cart-product-img" style="padding:10px 10px 10px 10px;">
+                    <img [src]="art.image" width="80px" height="80px" />
+                </div>
+
+
+                <div class="cart-product-info" style="padding:10px 10px 10px 10px; width:190px; line-height: 8px;">
+                    <h3 style=" color:crimson;"> {{art.name}} </h3>
+                    <p muted style="font-size:12px">180x60 </p>
+                    <p muted style="font-size:12px">by {{ art.author }} </p>
+                </div>
+
+                <div style="margin:auto">
+                    <input type="number" value="1" name="fname" style="width:70px; height:30px">
+                </div>
+
+                <div style="margin:auto; margin-left: 120px;  text-align: center; width:90px">
+                    <br>
+                    <h3 style="color:orange">${{art.price}}.00 </h3>
+                    <p id="remove" style="font-size:11px;cursor:pointer" (click)="deleteCartItem(art)">REMOVE</p>
+                </div>
+
+                <hr style="width:100%;">
+            </div>
+            <p> Subtotal: ${{subtotal}}.00</p><br>
+            <div>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </mat-step>
+
+
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Fill out your name</ng-template>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="First name" formControlName="firstCtrl" required
+                        [(ngModel)]="formName">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field><br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Lastname</mat-label>
+                    <input matInput placeholder="Last name" formControlName="firstCtrl" required
+                        [(ngModel)]="formLName">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field><br>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Telephone</mat-label>
+                    <span matPrefix>+381 &nbsp;</span>
+                    <input type="tel" matInput placeholder="61-1111-111" formControlName="firstCtrl" required
+                        [(ngModel)]="formPhone">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field>
+
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>&nbsp;
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+
+
+        <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Fill out your address</ng-template>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St" required
+                        [(ngModel)]="formAddress">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field><br>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>City</mat-label>
+                    <input matInput formControlName="secondCtrl" placeholder="Ex. New York" required
+                        [(ngModel)]="formCity">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field> <br>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>State</mat-label>
+                    <input matInput formControlName="secondCtrl" placeholder="Ex. New York" required
+                        [(ngModel)]="formState">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field> <br>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Postal Code</mat-label>
+                    <input matInput formControlName="secondCtrl" #postalCode maxlength="5" placeholder="Ex. 94105"
+                        required [(ngModel)]="formPostal">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                    <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                </mat-form-field>
+
+
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>&nbsp;
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+
+        <mat-step>
+            <ng-template matStepLabel>Payment</ng-template>
+
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Payment method</mat-label>
+                <mat-select [disabled]="disableSelect.value" [(value)]="selected">
+                    <mat-option value="del">On delivery</mat-option>
+                    <mat-option value="option2" disabled>Credit card</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <p><br>
+                <a style="color:orange">Card payments are currently suspended.</a> <br>
+                All prices are shown in worldwide currency (dollar) including VAT.<br>
+                Delivery time is 1-7 working days. We deliver on weekdays from 8 a.m. to 5 p.m. The minimum order
+                value for <a style="color:orange"> free delivery is $3000.00</a>,
+                and for orders below $3000.00 <a style="color:orange"> delivery costs are $50.00</a>.
+            </p><br>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>&nbsp;
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </mat-step>
+
+
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <h2 style="color:teal">Please check your informations</h2>
+
+            <mat-card>
+
+                <h5 style="color:orange">Name and contact</h5>
+                <p> {{formName}} {{formLName}}, +381 {{formPhone}}</p>
+
+                <h5 style="color:orange">Address</h5>
+                <p> {{formAddress}}, {{formCity}}, {{formState}}, {{formPostal}}</p>
+
+                <h5 style="color:orange">Artefacts</h5>
+                <div style="display:flex; flex-wrap:wrap">
+
+                    <div class="cart-product"
+                        style="display:flex;flex-wrap:wrap; justify-content: left; text-align:left;"
+                        *ngFor="let art of artsCart">
+                        <div class="cart-product-img" style="padding:10px 10px 10px 10px;">
+                            <img [src]="art.image" width="80px" height="80px" />
+                        </div>
+
+
+                        <div class="cart-product-info" style="padding:10px 10px 10px 10px; line-height: 8px;">
+                            <h3 style=" color:crimson;"> {{art.name}} </h3>
+                            <p muted style="font-size:12px">180x60 </p>
+                            <p muted style="font-size:12px">${{art.price}}.00</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr style="width:30%; margin-left: 0px;">
+
+                <h5 > Subtotal: ${{subtotal}}.00</h5>
+                <h5 > Delivery costs: ${{delivery}}.00</h5>
+                <h2 > Total amount: ${{total}}.00</h2>
+
+
+                <!-- <p>{{formName}}</p>
+        <p>{{formLName}}</p>
+        <p>{{formPhone}}</p>
+        <p>{{formAddress}} {{formCity}} {{formState}} {{formPostal}}</p> -->
+            </mat-card><br>
+
+
+            <div>
+                <button mat-button matStepperPrevious>Back</button>&nbsp;
+                <button mat-button (click)="sendOrder()">OK</button>
+            </div>
+        </mat-step>
+    </mat-stepper>
+
+</div>

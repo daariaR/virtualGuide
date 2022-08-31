@@ -1,0 +1,14 @@
+<div style="display:flex">
+
+    <mat-icon>question_answer</mat-icon> &nbsp;&nbsp;
+    <h2 style="color:rgb(158, 5, 5)">Confirmation</h2>
+
+
+</div>
+
+<p> Are you sure you want to remove this item from your shopping list?</p>
+
+
+<button mat-button (click) = " yes()" style="background-color:teal; color:white; ">Yes</button> &nbsp;&nbsp;
+<button mat-button [mat-dialog-close]="decision" style="color:rgb(0, 0, 0); border:1px solid black">No</button>
+
